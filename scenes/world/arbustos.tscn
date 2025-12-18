@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://di2iucim52mm8"]
+
+[ext_resource type="Texture2D" uid="uid://ku314lli7hto" path="res://decoraciones nivel 1/arbusto1.png" id="1_7ymgm"]
+[ext_resource type="Texture2D" uid="uid://dmo6hsn5mu6sr" path="res://decoraciones nivel 1/arbusto3.png" id="2_qxkry"]
+[ext_resource type="Texture2D" uid="uid://cfjyxofh7yf5o" path="res://decoraciones nivel 1/arbusto2.png" id="3_cb5l1"]
+
+[node name="arbustos" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+texture = ExtResource("1_7ymgm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(63, 0)
+texture = ExtResource("2_qxkry")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(34, 0)
+texture = ExtResource("1_7ymgm")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(87, 2)
+texture = ExtResource("3_cb5l1")
