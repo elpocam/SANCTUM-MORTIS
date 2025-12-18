@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://b4vikf0e4wnkg"]
-
-[node name="roca" type="StaticBody2D"]
-position = Vector2(1, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
