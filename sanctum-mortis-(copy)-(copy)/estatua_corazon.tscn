@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://cd4r3a1llei4h"]
+
+[ext_resource type="Script" uid="uid://daequ1eo33mjo" path="res://estatua_corazon.gd" id="1_dw1pl"]
+[ext_resource type="Texture2D" uid="uid://cqill3rmx2pqh" path="res://decoraciones nivel 1/Animation6.png" id="1_y8sd4"]
+[ext_resource type="PackedScene" uid="uid://b2xvgw2f1s8x8" path="res://corazon.tscn" id="2_d1wv1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1wv1"]
+atlas = ExtResource("1_y8sd4")
+region = Rect2(0, 0, 48, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw1pl"]
+atlas = ExtResource("1_y8sd4")
+region = Rect2(48, 0, 48, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nleku"]
+atlas = ExtResource("1_y8sd4")
+region = Rect2(96, 0, 48, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raxp1"]
+atlas = ExtResource("1_y8sd4")
+region = Rect2(144, 0, 48, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uuix"]
+atlas = ExtResource("1_y8sd4")
+region = Rect2(192, 0, 48, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0wpw"]
+atlas = ExtResource("1_y8sd4")
+region = Rect2(240, 0, 48, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tih7g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1wv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw1pl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nleku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raxp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uuix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0wpw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dw1pl"]
+size = Vector2(77, 74)
+
+[node name="EstatuaCorazon" type="Node2D"]
+script = ExtResource("1_dw1pl")
+
+[node name="SpriteEstatua" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_tih7g")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.4222511
+
+[node name="CorazonOculto" parent="." instance=ExtResource("2_d1wv1")]
+visible = false
+
+[node name="AreaAtaque" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_dw1pl")

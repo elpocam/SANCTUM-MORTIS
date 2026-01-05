@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cth6rxobi4qyh"]
+
+[ext_resource type="Texture2D" uid="uid://b12g5g2dgisn3" path="res://decoraciones nivel 1/Dead_arm_shadow2_1.png" id="1_vypbx"]
+[ext_resource type="Texture2D" uid="uid://cjmjq8cngqyb0" path="res://decoraciones nivel 1/Dead_arm_shadow1_3.png" id="2_1tukt"]
+[ext_resource type="Texture2D" uid="uid://y8ralsgc4334" path="res://decoraciones nivel 1/Dead_arm_shadow1_4.png" id="3_f2uq0"]
+[ext_resource type="Texture2D" uid="uid://dgd5wd2hh4e26" path="res://decoraciones nivel 1/Dead_arm_shadow1_1.png" id="4_qt8x5"]
+
+[node name="Decoracion2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 19)
+scale = Vector2(0.515625, 0.421875)
+texture = ExtResource("1_vypbx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(159, 20.000002)
+scale = Vector2(0.82031244, 0.6484375)
+texture = ExtResource("2_1tukt")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(324, 5.999999)
+scale = Vector2(0.82031244, 0.6484375)
+texture = ExtResource("3_f2uq0")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(154, -29.000002)
+scale = Vector2(0.5664071, 0.3554688)
+texture = ExtResource("4_qt8x5")
